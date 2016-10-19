@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>北美留学</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/money.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-static">
+			<div class="header">
+				<div class="container">
+					<p class="pull-right">
+						<a class="btn btn-link" href="about.html">关于我们</a>|
+						<a class="btn btn-link" href="help.html">帮助中心</a>
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Money2A"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul id="navbar-ul" class="nav navbar-nav navbar-right">
+						<li><a href="index.html">首页</a></li>
+						<li class="active"><a href="studyAbroad1.html">北美留学</a></li>
+						<li><a href="huikuan.html">北美汇款</a></li>
+						<!--未登录-->
+						<li>
+							<button id="sign-in" type="button" class="btn btn-default navbar-btn">登录</button>
+						</li>
+						<li>
+							<button id="sign-up" type="button" class="btn btn-default navbar-btn">注册</button>
+						</li>
+						<!--已登录-->
+						<li class="sign-out">
+							<button id="sign-out" type="button" class="btn btn-default navbar-btn">退出</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+
+		<div class="main-container">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8 col-sm-12">
+					<ul class="nav nav-tabs step" id="step-6">
+						<li role="presentation" class="first okay"><b><i>1</i></b><span>选择学校</span></li>
+						<li role="presentation" class="active"><b><i>2</i></b><span>填写订单</span></li>
+						<li role="presentation"><b><i>3</i></b><span>确认订单</span></li>
+						<li role="presentation"><b><i>4</i></b><span>提交审核</span></li>
+						<li role="presentation"><b><i>5</i></b><span>订单支付</span></li>
+						<li role="presentation" class="last"><b><i>6</i></b><span>完成</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container studyAbroad2">
+				<div class="row con-wrap">
+					<div class="page-header clearfix">
+						<h2 class="col-md-5 col-xs-12">支付信息</h2>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<label class="col-md-2 col-sm-2 control-label">学校名称</label>
+						<div class="col-md-3 col-sm-3 ">
+							<input type="text" class="form-control" placeholder="" name="school">
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<label class="col-md-2 col-sm-2 control-label">缴费金额</label>
+						<div class="col-md-4 col-sm-5">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="" name="money">
+								<span>加币</span>
+							</div>
+							<div class="col-sm-12">
+								<div class="check checked">
+									加急汇出
+								</div>
+								<div class="check">
+									足额到帐费
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<label class="col-md-2 col-sm-2 control-label">用途</label>
+						<div class="col-sm-6">
+							<div class="col-sm-12">
+								<div class="check checked">
+									学费
+								</div>
+								<div class="check">
+									住宿费
+								</div>
+								<div class="check">
+									留住费
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-header clearfix t_way">
+						<h2 class="col-md-5 col-xs-12">支付方式</h2>
+					</div>
+					<div class="col-md-12" id="trate">
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>汇款通道</th>
+										<th>通联</th>
+										<th>银联</th>
+										<th>支付宝</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>今日汇率</td>
+										<td>1%</td>
+										<td>1%</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>估算</td>
+										<td>10</td>
+										<td>10</td>
+										<td>10</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="container userCount">
+					<div class="row con-wrap">
+						<div class="page-header clearfix">
+							<h2 class="col-md-5 col-xs-5">学生信息</h2>
+							<a href="javascript:;" class="pull-right saveInfo">保存学生信息<i class="check checked"></i></a>
+						</div>
+
+						<div class="col-md-12 col-sm-12">
+							<form class="form-horizontal" role="form" id="reg-email-form" action="#" method="post">
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">学生姓名</label>
+									<div class="col-md-2 col-sm-2 ">
+										<input type="text" class="form-control" placeholder="英文姓" name="chineseName1">
+									</div>
+									<div class="col-md-2 col-sm-2 ">
+										<input type="text" class="form-control" placeholder="英文名" name="chineseName2">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">学号</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" placeholder="学校提供的学生ID，如无可不填" name="studentCode">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">学生账号</label>
+									<div class="col-sm-5">
+										<input type="text" class="form-control" placeholder="请按学校提供的Quount Number填写，如无可不填" name="studentCount">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">学生护照号</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" placeholder="" name="passBook">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label" for="captcha">护照照片页</label>
+									<div class="col-md-6 col-sm-6 update">
+										<span></span>
+										<input type="file" class="form-control" placeholder="" name="passbookw">
+										<p>支持JPG/PDF/KAR/ZIP格式，最大不超过1M</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label" for="captcha">护照签证页</label>
+									<div class="col-md-6 col-sm-6 update">
+										<span></span>
+										<input type="file" class="form-control" placeholder="" name="qianzheng">
+										<p>支持JPG/PDF/KAR/ZIP格式，最大不超过1M</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label" for="captcha">缴费凭证</label>
+									<div class="col-md-6 col-sm-6 update">
+										<span></span>
+										<input type="file" class="form-control" placeholder="" name="pingzheng">
+										<p>支持JPG/PDF/KAR/ZIP格式，最大不超过1M</p>
+										<a href="#">缴费凭证样本1></a>
+										<a href="#">缴费凭证样本2></a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<div class="container userCount">
+					<div class="row con-wrap">
+						<div class="page-header clearfix">
+							<h2 class="col-md-5 col-xs-12">学校账号</h2>
+						</div>
+
+						<div class="col-md-12 col-sm-12">
+							<form class="form-horizontal" role="form" id="reg-email-form" action="#" method="post">
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">收款账户</label>
+									<div class="col-md-4 col-sm-4 ">
+										<input type="text" class="form-control" placeholder="账号" name="count">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">收款账号名</label>
+									<div class="col-md-4 col-sm-4 ">
+										<input type="text" class="form-control" placeholder="" name="countName">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">分行号</label>
+									<div class="col-md-4 col-sm-4">
+										<input type="text" class="form-control" placeholder="" name="count1">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">IUSTITATION CODE</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control" placeholder="" name="CODE">
+										<p>以上信息以学校提供为准，请确保信息准确无误</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">开户行地址</label>
+									<div class="col-md-4 col-sm-4">
+										<input type="text" class="form-control" placeholder="" name="countAddress">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">SWIFT CODE</label>
+									<div class="col-md-4 col-sm-4">
+										<input type="text" class="form-control" placeholder="" name="countAddress1">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-2 col-sm-2 control-label">ABA CODE</label>
+									<div class="col-md-4 col-sm-4">
+										<input type="text" class="form-control" placeholder="" name="countAddress2">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+				<div class="container userCount">
+					<div class="row con-wrap">
+						<div class="page-header clearfix">
+							<h2 class="col-md-5 col-xs-12">付款信息</h2>
+						</div>
+
+						<div class="col-md-12 col-sm-12">
+							<div class="form-group">
+								<label class="col-md-2 col-sm-2 control-label">付款账户</label>
+								<div class="col-md-4 col-sm-4 ">
+									<input type="text" class="form-control" placeholder="" name="payCount">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="form-group">
+								<label class="col-md-2 col-sm-2 control-label">联系邮箱</label>
+								<div class="col-md-4 col-sm-4 ">
+									<input type="text" class="form-control" placeholder="" name="countMail">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="form-group">
+								<label class="col-md-2 col-sm-2 control-label">联系手机号</label>
+								<div class="col-md-4 col-sm-4">
+									<input type="text" class="form-control" placeholder="" name="phone">
+									<p>请提供国内联系方式，以方便我公司工作人员及时联系您</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 nextL">
+							<button type="button" class="btn btn-default navbar-btn next">下一步</button>
+							<a href="login.html">马上登录/注册></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="footer" id="footer">
+			<div class="container">
+				<ul>
+					<li>官方认证，放心汇款，值得信赖</li>
+					<li>随时随地，五分钟完成汇款 （24/7小时随时随地发起在线汇款）</li>
+					<li>状态跟踪，保证资金状态透明</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>交易查询</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/money.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-static">
+			<div class="header">
+				<div class="container">
+					<p class="pull-right">
+						<a class="btn btn-link" href="about.html">关于我们</a>|
+						<a class="btn btn-link" href="help.html">帮助中心</a>
+					</p>
+				</div>
+			</div>
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Money2A"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul id="navbar-ul" class="nav navbar-nav navbar-right">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="studyAbroad1.html">北美留学</a></li>
+						<li><a href="huikuan.html">北美汇款</a></li>
+						<!--未登录-->
+						<li>
+							<button id="sign-in" type="button" class="btn btn-default navbar-btn">登录</button>
+						</li>
+						<li>
+							<button id="sign-up" type="button" class="btn btn-default navbar-btn">注册</button>
+						</li>
+						<!--已登录-->
+						<li class="sign-out">
+							<button id="sign-out" type="button" class="btn btn-default navbar-btn">退出</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+		<nav class="navbar navbar-default" id="userIn">
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li><a href="userInfo.html">个人信息</a></li>
+					<li><a href="securitCenter.html">安全中心</a></li>
+					<li class="active"><a href="transaction.html">交易查询</a></li>
+			</div>
+		</nav>
+		<div class="main-container transaction">
+			<div class="container">
+				<div class="row con-wrap">
+					<div class="col-sm-12 col-xs-12">
+						<label class="col-sm-2 col-xs-12 control-label" for="captcha">起止日期</label>
+						<div class="col-sm-10  col-xs-12 ">
+							<div class="col-sm-3" style="padding-left: 0;">
+								<div class="input-append date form_datetime">
+									<input type="datetime" class="form-control" value="">
+									<span class="add-on"><i class="icon-th"></i></span>
+								</div>
+							</div>
+							<label class="col-sm-1 control-label" style="text-align: center;">至</label>
+							<div class="col-sm-3">
+								<div class="input-append date form_datetime">
+									<input type="datetime" class="form-control" value="">
+									<span class="add-on"><i class="icon-th"></i></span>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<button type="button" class="btn btn-default bluebtn navbar-btn">查询</button>
+								<button type="button" class="btn btn-default print navbar-btn">打印</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xs-12">
+						<label class="col-sm-2 col-xs-12 control-label" for="captcha">类型</label>
+						<div class="col-sm-10  col-xs-12 ">
+							<button type="button" class="btn btn-default bluebtn navbar-btn">全部</button>
+							<button type="button" class="btn btn-default navbar-btn">汇款</button>
+							<button type="button" class="btn btn-default navbar-btn">保险缴费</button>
+							<button type="button" class="btn btn-default navbar-btn">缴费</button>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xs-12 border-b">
+						<label class="col-sm-2 col-xs-12 control-label" for="captcha">状态</label>
+						<div class="col-sm-10 col-xs-12 ">
+							<button type="button" class="btn btn-default bluebtn navbar-btn">全部</button>
+							<button type="button" class="btn btn-default navbar-btn">等待汇款</button>
+							<button type="button" class="btn btn-default navbar-btn">审核中</button>
+							<button type="button" class="btn btn-default navbar-btn">审核不通过</button>
+							<button type="button" class="btn btn-default navbar-btn">已汇出</button>
+							<button type="button" class="btn btn-default navbar-btn">汇款失败</button>
+						</div>
+					</div>
+					<div class="page-header clearfix">
+						<h2 class="col-md-12 col-xs-12">交易记录</h2>
+					</div>
+
+					<div class="col-md-12 m-table" id="trate">
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>订单号</th>
+										<th>创建时间</th>
+										<th>收款人姓名</th>
+										<th>收款人账号</th>
+										<th>全额</th>
+										<th>状态</th>
+										<th>汇款用户</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>123456789</td>
+										<td>2016-03-21 19:31:47</td>
+										<td>张三</td>
+										<td>123456789</td>
+										<td>500.00</td>
+										<td>***</td>
+										<td>***</td>
+									</tr>
+									<tr>
+										<td>123456789</td>
+										<td>2016-03-21 19:31:47</td>
+										<td>张三</td>
+										<td>123456789</td>
+										<td>500.00</td>
+										<td>***</td>
+										<td>***</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-sm-9 col-xs-12 pull-right">
+							<div class="form-group">
+								<span class="col-sm-5">共<em>2</em>条记录,共<em>2</em>页;</span>
+								<div class="col-sm-3">
+									<div class="input-group">
+										<span class="control-label">跳转</span>
+										<input type="text" class="form-control" placeholder="" name="page">
+										<span class="control-label">页</span>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<button type="button" class="btn btn-default navbar-btn">上一页</button>
+									<button type="button" class="btn btn-default navbar-btn">下一页</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="footer" id="footer">
+				<div class="container">
+					<ul>
+						<li>官方认证，放心汇款，值得信赖</li>
+						<li>随时随地，五分钟完成汇款 （24/7小时随时随地发起在线汇款）</li>
+						<li>状态跟踪，保证资金状态透明</li>
+					</ul>
+				</div>
+			</div>
+
+			<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/bootstrap-datetimepicker.zh-CN.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+				$(function() {
+					$('input[type=datetime]').datetimepicker({
+						format: "yyyy-mm-dd hh:ii:ss",
+						weekStart: 1,
+						todayBtn: 1,
+						autoclose: 1,
+						todayHighlight: 1,
+						startView: 2,
+						forceParse: 0,
+						language: 'zh-CN',
+						showMeridian: 1
+					});
+				});
+			</script>
+	</body>
+
+</html>
